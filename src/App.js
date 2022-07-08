@@ -1,14 +1,19 @@
 import React from 'react';
 import './App.css';
 import apiKey from './config';
-import { Route, Link, NavLink } from 'react-router-dom';
+import { BrowserRouter, Route, Link, NavLink, Routes } from 'react-router-dom';
+
+import Search from './Search';
+import Nav from './Nav';
+import PhotoContainer from './PhotoContainer';
 
 function App() {
   return (
-    <div className="App">
-      {/* <Route /> */}
-      App
-
+    <div className="container">
+      <Search />
+      <Nav />
+      {/* <Routes>
+      </Routes> */}
     </div>
   );
 }
