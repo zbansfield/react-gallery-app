@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter, Link, NavLink, Route, Routes } from 'react-router-dom';
 import PhotoContainer from "./PhotoContainer";
 
-const Nav = ({apiKey}) => (
+const Nav = ({apiKey, photos}) => (
     <nav className="main-nav">
         <ul>
             <li><NavLink to='/cats'>Cats</NavLink></li>
@@ -11,9 +11,9 @@ const Nav = ({apiKey}) => (
         </ul>
 
         <Routes>
-            <Route path='/cats' element={<PhotoContainer apiKey={apiKey}/>}/>
-            <Route path='/dogs' element={<PhotoContainer apiKey={apiKey}/>}/>
-            <Route path='/computers' element={<PhotoContainer apiKey={apiKey}/>}/>
+            <Route path='/cats' element={<PhotoContainer apiKey={apiKey} photos={photos.cats} />}/>
+            <Route path='/dogs' element={<PhotoContainer apiKey={apiKey} photos={photos.dogs} />}/>
+            <Route path='/computers' element={<PhotoContainer apiKey={apiKey} photos={photos.computers} />}/>
         </Routes>
     </nav>
 

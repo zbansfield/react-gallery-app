@@ -5,38 +5,24 @@ import NoResults from "./NoResults";
 
 import axios from "axios";
 
-const PhotoContainer = ({apiKey}) => {
+const PhotoContainer = (props) => {
 
-    let photos;
-    https://api.flickr.com/services/rest/?format=json&method=flickr.photos.search&api_key=${apiKey}
+    const photos = props.photos;
+    let results = [];
 
-    fetch(`https://api.flickr.com/services/rest/?format=json&method=flickr.photos.getRecent&api_key=${apiKey}&text=cats&per_page=24&nojsoncallback=?`)
-        .then(res => res.json())
-        .then(data => {
-            photos = data
-            console.log(data.photos.photo)
-        })
-        .catch(error => {
-        console.log('Error fetching and parsing data', error);
+    if (photos.length > 0 ) {
+        photos.forEach(photo => {
+            results.push(<Photo src={`https://live.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`} key={photo.id}/>)
         });
-
-    let results = photos.map(photo => 
-        <Photo src={`https://live.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`} key={photo.id}/>
-    )
-
-    // if (results.length > 0 ) {
-    //     let photos = results.map(photo => 
-    //       <Photo src={`https://live.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`} key={photo.id}/>
-    //     )
-    //   } else {
-    //     photos = <NoResults />
-    //   }
+    } else {
+        let results = <NoResults />
+    }
 
     return (
         <div className="photo-container">
             <h2>Results</h2>
             <ul>
-                {photos}
+                {results}
             </ul>
         </div>
     )
