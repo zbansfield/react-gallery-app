@@ -2,9 +2,36 @@ import React, { Component } from "react";
 
 class Search extends Component {
 
-    state = {
-        searchText: ''
-    }
+    // state = {
+    //     searchText: '',
+    //     photos: []
+    // }
+    
+    // componentDidMount() {
+    //     fetch(`https://api.flickr.com/services/rest/?format=json&method=flickr.photos.search&api_key=${this.props.apiKey}&text=birds&per_page=24&nojsoncallback=?`)
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             this.setState({
+    //                 photos: data.photos.photo
+    //             })
+    //         })
+    //         .catch(error => {
+    //         console.log('Error fetching and parsing data', error);
+    //         });
+    // }
+    
+    //   search = (category) => {
+    //     fetch(`https://api.flickr.com/services/rest/?format=json&method=flickr.photos.getRecent&api_key=${apiKey}&text=${category}&per_page=24&nojsoncallback=?`)
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             this.setState({
+    //               photos: data.photos.photo
+    //             })
+    //         })
+    //         .catch(error => {
+    //         console.log('Error fetching and parsing data', error);
+    //         });
+    //   }
     
     onSearchChange = e => {
         this.setState({ searchText: e.target.value });
