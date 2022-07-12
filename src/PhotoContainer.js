@@ -15,7 +15,7 @@ const PhotoContainer = (props) => {
             results.push(<Photo src={`https://live.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`} key={photo.id}/>)
         });
     } else {
-        let results = <NoResults />
+        results = <NoResults />
     }
 
     return (

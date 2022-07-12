@@ -16,7 +16,7 @@ var createBrowserHistory = require("history").createBrowserHistory
 
 export default function App() {
   
-  const [category, setCategory] = useState('');
+  const [category, setCategory] = useState('birds');
   const [photos, setPhotos] = useState([]);
 
   useEffect(() => {
@@ -26,6 +26,7 @@ export default function App() {
         setPhotos(data.photos.photo)
       })
       .catch(error => {
+        setPhotos([])
       console.log('Error fetching and parsing data', error);
       });
   }, [category])
@@ -43,14 +44,12 @@ export default function App() {
       </nav>
 
       <Routes>
+        <Route path='/' element={<PhotoContainer category={'birds'} photos={photos}/>}/>
         <Route path='/birds' element={<PhotoContainer category={category} photos={photos}/>}/>
         <Route path='/books' element={<PhotoContainer category={category} photos={photos}/>}/>
         <Route path='/trees' element={<PhotoContainer category={category} photos={photos}/>}/>
         <Route path='/:category' element={<PhotoContainer category={category} photos={photos}/>}/>
       </Routes>
-      {/* <Nav apiKey={apiKey} changeCategory={category => {setCategory(category)}} photos={photos}/> */}
-      {/* <Routes>
-      </Routes> */}
     </div>
   );
 }
