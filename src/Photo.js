@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 const Photo = props => {
 
@@ -7,7 +7,6 @@ const Photo = props => {
             <img src={props.src} alt=""/>
         </li>
     )
-
 }
 
 export default Photo;

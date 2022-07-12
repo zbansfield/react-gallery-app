@@ -1,18 +1,12 @@
-import React, { Component, useEffect, useState } from 'react';
-import './App.css';
+import React, { useEffect, useState } from 'react';
 import apiKey from './config';
-import { BrowserRouter, Route, Link, NavLink, Routes } from 'react-router-dom';
-// import createBrowserHistory from 'history/createBrowserHistory'
+import { Route, Routes } from 'react-router-dom';
 
 import Search from './Search';
 import Nav from './Nav';
 import PhotoContainer from './PhotoContainer';
 
-import axios from 'axios';
-
 var createBrowserHistory = require("history").createBrowserHistory
-
-
 
 export default function App() {
   

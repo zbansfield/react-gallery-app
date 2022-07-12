@@ -1,9 +1,6 @@
-import React, { Component } from "react";
-import apiKey from "./config";
+import React from "react";
 import Photo from "./Photo";
 import NoResults from "./NoResults";
-
-import axios from "axios";
 
 const PhotoContainer = (props) => {
 

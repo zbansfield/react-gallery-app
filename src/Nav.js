@@ -1,7 +1,5 @@
-import { render } from "@testing-library/react";
 import React, { Component } from "react";
-import { BrowserRouter, Link, NavLink, Route, Routes } from 'react-router-dom';
-import PhotoContainer from "./PhotoContainer";
+import { NavLink } from 'react-router-dom';
 
 class Nav extends Component {
 
