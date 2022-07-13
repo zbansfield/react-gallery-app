@@ -1,18 +1,15 @@
 import React, { Component } from "react";
 import { NavLink } from 'react-router-dom';
 
-class Nav extends Component {
+const Nav = (props) => {
 
-    render() {
         return (
             <li>
-                <NavLink to={`/${this.props.category}`} onClick={() => this.props.changeCategory(this.props.category)}>
-                        {this.props.category.charAt(0).toUpperCase() + this.props.category.slice(1)}
-
+                <NavLink to={`/${props.category}`} onClick={() => props.changeCategory(props.category)}>
+                        {props.category.charAt(0).toUpperCase() + props.category.slice(1)}
                 </NavLink>
             </li>
         )
-    }
 };
 
 export default Nav;

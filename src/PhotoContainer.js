@@ -17,7 +17,7 @@ const PhotoContainer = (props) => {
 
     return (
         <div className="photo-container">
-            <h2>Results</h2>
+            <h2>{props.category.charAt(0).toUpperCase() + props.category.slice(1)}</h2>
             <ul>
                 {results}
             </ul>
