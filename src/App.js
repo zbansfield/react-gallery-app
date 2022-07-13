@@ -44,6 +44,7 @@ export default function App() {
         setPhotos([])
       console.log('Error fetching and parsing data', error);
       });
+    console.log(category)
   }, [category])
 
   return (
