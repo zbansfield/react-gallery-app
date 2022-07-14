@@ -1,14 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 
-class NoResults extends Component {
-    render() {
-        return (
-            <li className="not-found">
-                <h3>No Results Found</h3>
-                <p>You search did not return any results. Please try again.</p>
-            </li>
-        )
-    }
+const NoResults = () =>  {
+
+    return (
+        <li className="not-found">
+            <h3>No Results Found</h3>
+            <p>You search did not return any results. Please try again.</p>
+        </li>
+    )
 }
 
 export default NoResults;

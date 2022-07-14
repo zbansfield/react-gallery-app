@@ -7,6 +7,8 @@ const PhotoContainer = (props) => {
     const photos = props.photos;
     let results = [];
 
+    // Adding a <Photo/> component for each photo to results array 
+    // if there are no photos then adding the <NoResults/> component instead
     if (photos.length > 0 ) {
         photos.forEach(photo => {
             results.push(<Photo src={`https://live.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`} key={photo.id}/>)

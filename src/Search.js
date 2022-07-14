@@ -2,12 +2,17 @@ import React, { Component } from "react";
 
 class Search extends Component {
 
+    /** handeSubmit() function
+     * changes the category to what was searched in the search field
+     * changes the url to what was searched 
+     * @param {*} e 
+     */
     handleSubmit = e => {
         e.preventDefault();
         this.props.changeCategory(this.query.value)
         let searched = this.query.value
+        this.props.navigate(`/${searched}`)
         e.currentTarget.reset();
-        this.props.history(`/${searched}`)
     }
     
     render() {
