@@ -3,7 +3,7 @@ import Photo from "./Photo";
 import NoResults from "./NoResults";
 
 const PhotoContainer = (props) => {
-    console.log(props.category);
+    
     const photos = props.photos;
     let results = [];
 
