@@ -1,3 +1,8 @@
+# React Gallery App
+Unit 7 Project: React Gallery App
+
+Techdegree Treehouse Course Unit 7 project. In this project, I created a photo gallery app using React.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
